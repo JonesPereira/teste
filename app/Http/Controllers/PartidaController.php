@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\Validator;
 class PartidaController extends ControllerAPI
 {
     protected $model;
-    protected $model_times;
-    protected $model_jogador;
 
     /**
      * Injeta o Repository na classe.
@@ -21,8 +19,6 @@ class PartidaController extends ControllerAPI
     public function __construct(Partida $partida)
     {
         $this->model = new RepositoryPartida($partida);
-        $this->model_time = new RepositoryTime($partida);
-        $this->model_jogador = new RepositoryJogador($partida);
     }
 
     /**
